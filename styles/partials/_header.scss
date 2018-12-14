@@ -32,15 +32,39 @@ header{
 
 .title{
     color: white;
-    transform: rotate(45deg);
     position: relative;
-    left: 518px;
-    bottom: 130px;
+    // transform: rotate(45deg);
+    // left: 518px;
+    // bottom: 130px;
+    transform: rotate(-45deg);
+    right: 505px;
+    bottom: 330px;
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 5rem;
-    
+    font-size: 6rem;   
+}
+
+.socials{
+    color: white;
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: right;
+    bottom: 750px;
+    left: 65px;
+    transform: rotate(45deg);
+}
+
+.socials li{
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+i{
+    color: white;  
+    font-size: 2.8rem;  
 }
 
 

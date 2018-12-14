@@ -1,6 +1,8 @@
 $(function () {
     let firstShadow = getShadow('#fa3297', 510, 'bottomLeft');
-    let secondShadow = getShadow('#ff4479', 400, 'bottomRight')
+    // let secondShadow = getShadow('#ff4479', 400, 'bottomRight');
+    let secondShadow = getShadow('#FF1E50', 400, 'bottomRight');
+
     $('h1').attr('style', firstShadow);
     $('h2').attr('style', secondShadow);
 });
