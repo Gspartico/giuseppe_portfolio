@@ -1,0 +1,24 @@
+.skills{
+    display: flex;
+    background: black;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.skills__set--1,
+.skills__set--2{
+    display: flex;
+}
+
+.skills li{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.skills i{
+    font-size: 7rem
+}
