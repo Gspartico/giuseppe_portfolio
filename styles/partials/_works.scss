@@ -3,43 +3,93 @@
     flex-direction: column;
     align-items: center;
     
-    &__willow{
+    // &__willow{
+    //     display: flex;
+    //     margin: 25px 0;
+    //     position: relative;
+
+        // &--desc{
+        //     padding: 0 30px;
+        //     font-size: 1.7rem;
+        //     margin-left: 20px;
+        //     letter-spacing: 0.5px;
+        //     line-height: 1.5;
+
+        //         & h3{
+        //             font-size: 3.2rem;
+        //             margin-bottom: 10px;
+        //         }
+
+        //         & a:hover{
+        //             transition: color 0.3s ease-in;
+        //             color: #fa3297;
+        //         }
+
+        //         & span{
+        //             color: #fa3297;
+        //             font-size: 2rem;
+        //         }
+        // }
+
+        // &--line{
+        //     border-top: 5px solid #fa3297;
+        //     transform: rotate(90deg);
+        //     width: 280px;
+        //     position: absolute;
+        //     left: 39%;
+        //     top: 50%;
+        // }
+
+        // & img{
+        //     max-width: 100%;
+        // }
+    }
+
+#work{
+    width: 40%;
+    margin-right: 25px;
+}
+
+.willow{
+
         display: flex;
         margin: 25px 0;
         position: relative;
 
-        &--desc{
+        &__desc{
             padding: 0 30px;
             font-size: 1.7rem;
-            margin-left: 20px;
+            margin-left: 30px;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+
+                & h3{
+                    font-size: 3.2rem;
+                    margin-bottom: 10px;
+                }
+
+                & a:hover{
+                    transition: color 0.3s ease-in;
+                    color: #fa3297;
+                }
+
+                & span{
+                    color: #fa3297;
+                    font-size: 2rem;
+                }
         }
 
-        & img{
-    max-width: 100%;
-}
+        &__line{
+            border-top: 5px solid #fa3297;
+            transform: rotate(90deg);
+            width: 280px;
+            position: absolute;
+            left: 37%;
+            top: 50%;
+        }
     }
-}
 
-#work{
-    width: 40%;
-}
-
-
-.works__willow--pic,
-.works__willow--desc{
-    width: 50%;
-}
-
-
-.works__willow img{
+.willow__pic img{
     max-width: 100%;
-}
-
-.works__willow--line{
-    border-top: 5px solid #fa3297;
-    transform: rotate(90deg);
-    width: 280px;
-    position: absolute;
-    left: 39%;
-    top: 50%;
+    margin-left: 10px;
 }
