@@ -21,3 +21,35 @@
     padding: 25px;
     margin-left: 20px;
 }
+
+.about__svg{
+    path{
+        stroke: #fa3297;
+        fill: #fa3297;
+        stroke-dasharray: 263;
+        animation: animate 3s cubic-bezier(0, .23, 1, .1); 
+    }
+
+    @keyframes animate {
+        0%{
+            opacity: 0;
+            fill: none;
+            stroke-dashoffset: 273;
+        }
+
+        30%{
+            opacity: 10;
+            fill: none;
+            stroke-dashoffset: 273;
+        }
+
+        90%{
+            fill: #fa3297;
+        }
+
+        100%{
+            fill: #fa3297;
+        }
+    }
+}
+
