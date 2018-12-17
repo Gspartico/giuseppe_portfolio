@@ -1,4 +1,143 @@
 .contact{
     background: black;
     text-align: center;
+
+    &__why{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img{
+            width: 10%;
+        }
+
+        & p{
+            margin: 0 15px;
+            
+            font-size: 2rem;
+
+        }
+
+        & span{
+            color: #fa3297;
+        }
+    }
+
+    &__form{
+        width: 100%;
+        border: none;
+        padding-bottom: 40px;
+
+        & input,
+        & textarea{ 
+            background: transparent;
+            margin-top: 10px;
+            padding: 10px;
+            border-color: transparent;
+            border-bottom: 2px solid #fa3297;
+            font-size: 2rem;
+            outline: none;
+            color: white;
+        }
+
+        & label{
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+    }
 }
+
+input:required{
+    box-shadow: none;
+}
+
+.form p{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.form a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.form span{
+    color: #fa3297;
+}
+
+.form__reachMe{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__emailName{
+    display: flex;
+    margin-top: 45px;
+    color: white;
+    position: relative;
+}
+
+.name,
+.email{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.name{
+    padding-right: 30px;
+}
+
+.email{
+    padding-left: 30px;
+}
+
+.form__message{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+    & textarea{
+        resize: none;
+    }
+}
+
+.form__send{
+    margin-top: 40px;
+    border: none;
+    width: 100%;
+    margin-bottom: 30px;
+
+    & input{
+        margin: 0;
+        font-size: 2.3rem;
+        border: 2px solid #fa3297;
+        width: 20%;
+    }
+}
+
+input, textarea {
+  -webkit-transition: all 0.40s ease-in-out;
+  -moz-transition: all 0.40s ease-in-out;
+  -ms-transition: all 0.40s ease-in-out;
+  -o-transition: all 0.40s ease-in-out;
+  transition: all 0.40s ease-in-out;
+  outline: none;
+}
+ 
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px #fa3297;
+  border: 2px solid #fa3297;
+}
+
+.toTop{
+    font-size: 2.2rem;
+}
+

@@ -11,7 +11,7 @@
     <title>Giuseppe Spartico</title>
 </head>
 <body>
-    <header>
+    <header id="top">
         <h1 class="giuseppe">Giuseppe</h1>
         <h2 class="spartico">Spartico</h2>
         <h4 class="title">Web Developer</h4>
@@ -24,8 +24,8 @@
         </ul>      
     </header>
     <main>
-        <section class="about wrapper">
-            <svg class="about__svg" width="300px" height="150px" viewBox="0 0 171 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <section id="revealAbout" class="about wrapper">
+            <svg id="about__svg" class="about__svg elementToHide" width="300px" height="150px" viewBox="0 0 171 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                 <title>about</title>
                 <desc>Created with Sketch.</desc>
@@ -37,13 +37,13 @@
             </svg>
             <div class="about__content">
                 <img src="./assets/HY_Headshot.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente unde ullam aspernatur doloremque et ipsa quis, consectetur hic harum, ad enim. Nesciunt labore hic, consequuntur maiores at earum porro optio deserunt quae voluptates et autem laudantium, nihil fuga mollitia fugit repellat! Minima exercitationem consequatur expedita ut quo at non unde?x
+                <p>In case you blew past the big letters above, my name is <span>Giuseppe Spartico</span> and I am a Front End Web Developer based in Toronto. I have a degree in Biology/Forensic Science but spent most of my time working in fashion and music before finding a true love in web development.  I enjoy building creative websites with a focus on user engagement and accessibility.
                 </p>
             </div>
         </section>
-        <section class="skills">
+        <section id="revealSkills" class="skills">
                 <?xml version="1.0" encoding="UTF-8"?>
-                <svg class="skills__svg" width="230px" height="150px" viewBox="0 0 110 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg id="skills__svg" class="skills__svg" width="230px" height="150px" viewBox="0 0 110 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                     <title>skills</title>
                     <desc>Created with Sketch.</desc>
@@ -107,7 +107,7 @@
             
             </div>         
         </section>
-        <section class="works wrapper">
+        <section id="revealSvg" class="works wrapper">
             <?xml version="1.0" encoding="UTF-8"?>
             <svg id="work" width="200px" height="150px" viewBox="0 0 237 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
@@ -246,10 +246,15 @@
                     </a>
                 </div>               
             </div>
+            <div class="contact__why">
+                <img src="./assets/Zoidberg.jpg" alt="">
+                <p>Need a Front End Developer? Why not <span>Giuseppe?</span></p>
+                <img src="./assets/Giuseppe.png" alt="">
+            </div>
         </section>    
-            <section class="contact">
+        <section id="revealSvg" class="contact">
                 <?xml version="1.0" encoding="UTF-8"?>
-                <svg width="250px" height="150px" viewBox="0 0 151 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg id="svg" width="250px" height="150px" viewBox="0 0 151 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
                     <title>contact</title>
                     <desc>Created with Sketch.</desc>
@@ -259,10 +264,41 @@
                             fill="#000000"></path>
                     </g>
                 </svg>
+                <div class="contact__container wrapper">
+                <div class="contact__form clearfix">
+                    <form class="form" action="" method="POST">
+                        <div class="form__reachMe">
+                        <p>Don't be shy, reach out!</p>
+                        <a class="mailto" href="mailto:giuseppe@giuseppespartico.com">giuseppe <span> [at] </span> giuseppespartico <span> [dot]</span> com
+                        </a>
+                        </div>
+                        <div class="form__emailName">
+                            <div class="name">
+                                <label for="name">Name:</label>
+                                <input id="name" name="name" placeholder="Who are you?" onfocus="this.placeholder=''" onblur="this.placeholder='Who are you?'" required='' type="text">
+                            </div>
+                            <div class="email">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="you@probablygmail.com" onfocus="this.placeholder=''" onblur="this.placeholder='you@probablygmail.com'" required=''>
+                            </div>
+                        </div>
+                        <div class="form__message">
+                            <label for="messsage">What's good?</label>
+                            <textarea name="messgae" id="message" placeholder="Tell me how to help you, help me, help you" onfocus="this.placeholder=''" onblur="this.placeholder='Tell me how to help, you, help me, help you' "cols="40" rows="5"></textarea>
+                        </div>
+                        <div class="form__send">
+                            <input class="send" value="Send It!" type="submit">
+                        </div>
+                        <a class="toTop" href="#top">Back to Top</a>
+                    </form>
+                </div>
+                </div>
             </section>
-
         </section>
     </main>
+    <footer>
+        &#169; Copyright Giuseppe Spartico 2018
+    </footer>
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="scripts/scripts.js"></script>

@@ -34,34 +34,34 @@
 .skills span{
     margin-top: 13px;
 }
+// .skills__svg{
+//     path{
+//         stroke: #fa3297;
+//         fill: #fa3297;
+//         stroke-dasharray: 263;
+//         animation: animate 7s cubic-bezier(0, .23, 1, .1); 
+//     }
 
-.skills__svg{
-    path{
-        stroke: #fa3297;
-        fill: #fa3297;
-        stroke-dasharray: 263;
-        animation: animate 7s cubic-bezier(0, .23, 1, .1); 
-    }
+//     @keyframes animate {
+//         0%{
+//             opacity: 0;
+//             fill: none;
+//             stroke-dashoffset: 273;
+//         }
 
-    @keyframes animate {
-        0%{
-            opacity: 0;
-            fill: none;
-            stroke-dashoffset: 273;
-        }
 
-        30%{
-            opacity: 10;
-            fill: none;
-            stroke-dashoffset: 273;
-        }
+//         30%{
+//             opacity: 10;
+//             fill: none;
+//             stroke-dashoffset: 273;
+//         }
 
-        90%{
-            fill: #fa3297;
-        }
+//         90%{
+//             fill: #fa3297;
+//         }
 
-        100%{
-            fill: #fa3297;
-        }
-    }
-}
+//         100%{
+//             fill: #fa3297;
+//         }
+//     }
+// }

@@ -1,11 +1,24 @@
-$(function () {
-    let firstShadow = getShadow('#fa3297', 510, 'bottomLeft');
-    // let secondShadow = getShadow('#ff4479', 400, 'bottomRight');
-    let secondShadow = getShadow('#FF1E50', 400, 'bottomRight');
+const portfolio = {};
 
-    $('h1').attr('style', firstShadow);
-    $('h2').attr('style', secondShadow);
-});
+// Document Ready
+
+$(function () {
+    portfolio.init();
+    portfolio.backToTop();
+    portfolio.reveal();
+})
+
+portfolio.init = function(){
+    portfolio.textShadow()
+}
+
+portfolio.textShadow = function(){
+
+let firstShadow = getShadow('#fa3297', 510, 'bottomLeft');
+let secondShadow = getShadow('#FF1E50', 400, 'bottomRight');
+
+ $('h1').attr('style', firstShadow);
+$('h2').attr('style', secondShadow);
 
 function getShadow(color, pxlength, direction) {
     textShadow = [];
@@ -32,20 +45,27 @@ function getShadow(color, pxlength, direction) {
     }
     return `text-shadow: ${textShadow.join()};`
 }
+// Credit for text-shadow function to Tiff Noguira and Kristen Spencer from the codepens -
+}
 
-// const path = document.querySelector('#about', '#skills');
-// const pathLength = path.getTotalLength();
-// path.style.strokeDasharray = pathLength + ' ' + pathLength;
-// path.style.strokeDashoffset = pathLength;
+portfolio.backToTop = function () {
+    $(".toTop").on('click', function () {
+        $('html, body').animate({
+            scrollTop: $('body').offset().top
+        }, 1000);
+    })
+}
 
-// window.addEventListener("scroll", function (e) {
-//     const scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-//     const drawLength = pathLength * scrollPercentage;
-//     path.style.strokeDashoffset = pathLength - drawLength;
-// });
+portfolio.reveal = function () {
+    $(window).scroll(function () {
+        $('#about__svg').each(function () {
+            var imagePos = $(this).offset().top;
+            var imageHeight = $(this).height();
+            var topOfWindow = $(window).scrollTop();
 
-// if (scrollPercentage >= 0.99) {
-//     path.style.strokeDasharray = "none";
-// } else {
-//     path.style.strokeDasharray = pathLength + ' ' + pathLength;
-// }
+            if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
+                $('#revealAbout').addClass("revealOnScroll");
+            }
+        });
+    });
+}
