@@ -254,23 +254,23 @@ i {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 70px; }
-
-.about__content img {
-  width: 30%;
-  margin-right: 20px; }
-
-.about__content p {
-  width: 50%;
-  font-family: 'Merriweather', sans-serif;
-  font-size: 1.9rem;
-  letter-spacing: 1.3px;
-  line-height: 1.5;
-  padding: 25px;
-  margin-left: 20px; }
-  .about__content p span {
+  .about__content img {
+    width: 30%;
+    margin-right: 20px; }
+  .about__content p {
+    width: 50%;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 1.3px;
+    line-height: 1.5;
+    padding: 25px;
+    margin-left: 20px; }
+  .about__content--giuseppe {
     text-shadow: 1px 1px #FF1E50, 2px 2px #fa3297;
     font-weight: 700;
     font-size: 2rem; }
+  .about__content--literally {
+    color: #fa3297; }
 
 .elementToHide {
   opacity: 0; }
@@ -400,6 +400,11 @@ i {
     .video__desc h3,
     .horror__desc h3 {
       font-size: 2.8rem; }
+    .willow__desc h4,
+    .marvel__desc h4,
+    .video__desc h4,
+    .horror__desc h4 {
+      font-size: 1.6rem; }
     .willow__desc p,
     .marvel__desc p,
     .video__desc p,
@@ -787,11 +792,12 @@ input:focus, textarea:focus {
   box-shadow: 0 0 5px #fa3297;
   border: 2px solid #fa3297; }
 
-.toTop {
-  font-size: 2.2rem; }
+form .toTop {
+  font-size: 2.1rem; }
 
 footer {
   background: black;
   text-align: center;
   font-size: 1.7rem;
-  color: #fa3297; }
+  color: #fa3297;
+  padding-bottom: 15px; }
