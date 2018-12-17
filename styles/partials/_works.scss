@@ -2,75 +2,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    // &__willow{
-    //     display: flex;
-    //     margin: 25px 0;
-    //     position: relative;
-
-        // &--desc{
-        //     padding: 0 30px;
-        //     font-size: 1.7rem;
-        //     margin-left: 20px;
-        //     letter-spacing: 0.5px;
-        //     line-height: 1.5;
-
-        //         & h3{
-        //             font-size: 3.2rem;
-        //             margin-bottom: 10px;
-        //         }
-
-        //         & a:hover{
-        //             transition: color 0.3s ease-in;
-        //             color: #fa3297;
-        //         }
-
-        //         & span{
-        //             color: #fa3297;
-        //             font-size: 2rem;
-        //         }
-        // }
-
-        // &--line{
-        //     border-top: 5px solid #fa3297;
-        //     transform: rotate(90deg);
-        //     width: 280px;
-        //     position: absolute;
-        //     left: 39%;
-        //     top: 50%;
-        // }
-
-        // & img{
-        //     max-width: 100%;
-        // }
-    }
+}
 
 #work{
     width: 40%;
     margin-right: 25px;
 }
 
-.willow{
+.willow,
+.marvel,
+.video,
+.horror{
 
         display: flex;
-        margin: 25px 0;
+        margin-bottom: 25px;
         position: relative;
 
         &__desc{
             padding: 0 30px;
             font-size: 1.7rem;
-            margin-left: 30px;
             letter-spacing: 0.5px;
             line-height: 1.5;
 
                 & h3{
-                    font-size: 3.2rem;
-                    margin-bottom: 10px;
+                    font-size: 2.8rem;
                 }
-
-                & a:hover{
-                    transition: color 0.3s ease-in;
-                    color: #fa3297;
+                
+                & p {
+                    margin: 10px 0;
                 }
 
                 & span{
@@ -79,7 +38,7 @@
                 }
         }
 
-        &__line{
+        &__divide{
             border-top: 5px solid #fa3297;
             transform: rotate(90deg);
             width: 280px;
@@ -89,7 +48,158 @@
         }
     }
 
-.willow__pic img{
+.willow__desc,
+.video__desc{
+    margin-left: 30px;
+}
+
+.marvel__desc,
+.horror__desc{
+    margin-right: 30px;
+    text-align: right;
+}
+
+.willow__desc a,
+.marvel__desc a,
+.video__desc a,
+.horror__desc a{
+    padding: $pad $extra;
+    display: inline-block;
+    border: $thick solid transparent;
+    position: relative;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    .text {
+      color: black;
+      transform: translate3d(0,$pad,0);
+      display: block;
+      transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      bottom: -$thick;
+      left: $extra;
+      right: $extra;
+      height: $thick;
+      background: #fa3297;
+      transition: 
+        transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+        right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+        left 0.4s cubic-bezier(.04,.48,0,1) 0.6s;
+      transform-origin: left;
+    }
+}
+
+.line {
+    position: absolute;
+    background: #fa3297;
+
+    &.-right,
+    &.-left {
+      width: $thick;
+      bottom: -$thick;
+      top: -$thick;
+      transform: scale3d(1,0,1);
+    }  
+
+    &.-top,
+    &.-bottom {
+      height: $thick;
+      left: -$thick;
+      right: -$thick;
+      transform: scale3d(0,1,1);
+    }
+
+    &.-right {
+      right: -$thick;
+      transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+      transform-origin: top;
+    }
+
+    &.-top {
+      top: -$thick;
+      transition: transform 0.08s linear 0.43s;
+      transform-origin: left;
+    }
+
+    &.-left {
+      left: -$thick;
+      transition: transform 0.08s linear 0.51s;
+      transform-origin: bottom;
+    }
+
+    &.-bottom {
+      bottom: -$thick;
+      transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+      transform-origin: right;
+    }  
+}
+
+.willow__desc a:hover,
+.willow__desc a:active,
+.marvel__desc a:hover,
+.marvel_desc a:active,
+.video__desc a:hover,
+.video__desc a:active,
+.horror__desc a:hover,
+.horror__desc a:active{
+
+    .text {
+      transform: translate3d(0,0,0);
+      transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+    }
+
+    &:after {
+      transform: scale3d(0,1,1);
+      right: -$thick;
+      left: -$thick;
+      transform-origin: right;
+      transition: 
+        transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+        right 0.2s cubic-bezier(1,0,.65,1.01),
+        left 0s 0.3s;
+    }
+
+    .line {
+      transform: scale3d(1,1,1);
+
+      &.-right {
+        transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+        transform-origin: bottom;
+      }
+
+      &.-top {
+        transition: transform 0.08s linear 0.4s;
+        transform-origin: right;
+      }
+
+      &.-left {
+        transition: transform 0.08s linear 0.48s;
+        transform-origin: top;
+      }
+
+      &.-bottom {
+        transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+        transform-origin: left;
+      }
+    }
+
+}
+
+.willow__pic img,
+.video__pic img{
     max-width: 100%;
+    margin-top: 20px;
     margin-left: 10px;
+}
+
+.marvel__pic img,
+.horror__pic img{
+    max-width: 100%;
+    margin-top: 20px;
+    margin-right: 10px;
 }

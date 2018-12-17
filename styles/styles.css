@@ -384,30 +384,43 @@ i {
   width: 40%;
   margin-right: 25px; }
 
-.willow {
+.willow,
+.marvel,
+.video,
+.horror {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 25px 0;
+  margin-bottom: 25px;
   position: relative; }
-  .willow__desc {
+  .willow__desc,
+  .marvel__desc,
+  .video__desc,
+  .horror__desc {
     padding: 0 30px;
     font-size: 1.7rem;
-    margin-left: 30px;
     letter-spacing: 0.5px;
     line-height: 1.5; }
-    .willow__desc h3 {
-      font-size: 3.2rem;
-      margin-bottom: 10px; }
-    .willow__desc a:hover {
-      -webkit-transition: color 0.3s ease-in;
-      -o-transition: color 0.3s ease-in;
-      transition: color 0.3s ease-in;
-      color: #fa3297; }
-    .willow__desc span {
+    .willow__desc h3,
+    .marvel__desc h3,
+    .video__desc h3,
+    .horror__desc h3 {
+      font-size: 2.8rem; }
+    .willow__desc p,
+    .marvel__desc p,
+    .video__desc p,
+    .horror__desc p {
+      margin: 10px 0; }
+    .willow__desc span,
+    .marvel__desc span,
+    .video__desc span,
+    .horror__desc span {
       color: #fa3297;
       font-size: 2rem; }
-  .willow__line {
+  .willow__divide,
+  .marvel__divide,
+  .video__divide,
+  .horror__divide {
     border-top: 5px solid #fa3297;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
@@ -417,6 +430,239 @@ i {
     left: 37%;
     top: 50%; }
 
-.willow__pic img {
+.willow__desc,
+.video__desc {
+  margin-left: 30px; }
+
+.marvel__desc,
+.horror__desc {
+  margin-right: 30px;
+  text-align: right; }
+
+.willow__desc a,
+.marvel__desc a,
+.video__desc a,
+.horror__desc a {
+  padding: 0.2rem calc(0.2rem * 1.2);
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 10px; }
+  .willow__desc a .text,
+  .marvel__desc a .text,
+  .video__desc a .text,
+  .horror__desc a .text {
+    color: black;
+    -webkit-transform: translate3d(0, 0.2rem, 0);
+    transform: translate3d(0, 0.2rem, 0);
+    display: block;
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    transition: -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    -o-transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s, -webkit-transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+  .willow__desc a:after,
+  .marvel__desc a:after,
+  .video__desc a:after,
+  .horror__desc a:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: calc(0.2rem * 1.2);
+    right: calc(0.2rem * 1.2);
+    height: 3px;
+    background: #fa3297;
+    -webkit-transition: right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+    transition: right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+    -o-transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+    transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, -webkit-transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left; }
+
+.line {
+  position: absolute;
+  background: #fa3297; }
+  .line.-right, .line.-left {
+    width: 3px;
+    bottom: -3px;
+    top: -3px;
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1); }
+  .line.-top, .line.-bottom {
+    height: 3px;
+    left: -3px;
+    right: -3px;
+    -webkit-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1); }
+  .line.-right {
+    right: -3px;
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    -o-transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s, -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top; }
+  .line.-top {
+    top: -3px;
+    -webkit-transition: -webkit-transform 0.08s linear 0.43s;
+    transition: -webkit-transform 0.08s linear 0.43s;
+    -o-transition: transform 0.08s linear 0.43s;
+    transition: transform 0.08s linear 0.43s;
+    transition: transform 0.08s linear 0.43s, -webkit-transform 0.08s linear 0.43s;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left; }
+  .line.-left {
+    left: -3px;
+    -webkit-transition: -webkit-transform 0.08s linear 0.51s;
+    transition: -webkit-transform 0.08s linear 0.51s;
+    -o-transition: transform 0.08s linear 0.51s;
+    transition: transform 0.08s linear 0.51s;
+    transition: transform 0.08s linear 0.51s, -webkit-transform 0.08s linear 0.51s;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom; }
+  .line.-bottom {
+    bottom: -3px;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transition: -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    -o-transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01), -webkit-transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right; }
+
+.willow__desc a:hover .text,
+.willow__desc a:active .text,
+.marvel__desc a:hover .text,
+.marvel_desc a:active .text,
+.video__desc a:hover .text,
+.video__desc a:active .text,
+.horror__desc a:hover .text,
+.horror__desc a:active .text {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  -o-transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s, -webkit-transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+
+.willow__desc a:hover:after,
+.willow__desc a:active:after,
+.marvel__desc a:hover:after,
+.marvel_desc a:active:after,
+.video__desc a:hover:after,
+.video__desc a:active:after,
+.horror__desc a:hover:after,
+.horror__desc a:active:after {
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  right: -3px;
+  left: -3px;
+  -webkit-transform-origin: right;
+  -ms-transform-origin: right;
+  transform-origin: right;
+  -webkit-transition: right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s, -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  transition: right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s, -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s;
+  -o-transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
+  transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s, -webkit-transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s; }
+
+.willow__desc a:hover .line,
+.willow__desc a:active .line,
+.marvel__desc a:hover .line,
+.marvel_desc a:active .line,
+.video__desc a:hover .line,
+.video__desc a:active .line,
+.horror__desc a:hover .line,
+.horror__desc a:active .line {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+  .willow__desc a:hover .line.-right,
+  .willow__desc a:active .line.-right,
+  .marvel__desc a:hover .line.-right,
+  .marvel_desc a:active .line.-right,
+  .video__desc a:hover .line.-right,
+  .video__desc a:active .line.-right,
+  .horror__desc a:hover .line.-right,
+  .horror__desc a:active .line.-right {
+    -webkit-transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transition: -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    -o-transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s, -webkit-transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom; }
+  .willow__desc a:hover .line.-top,
+  .willow__desc a:active .line.-top,
+  .marvel__desc a:hover .line.-top,
+  .marvel_desc a:active .line.-top,
+  .video__desc a:hover .line.-top,
+  .video__desc a:active .line.-top,
+  .horror__desc a:hover .line.-top,
+  .horror__desc a:active .line.-top {
+    -webkit-transition: -webkit-transform 0.08s linear 0.4s;
+    transition: -webkit-transform 0.08s linear 0.4s;
+    -o-transition: transform 0.08s linear 0.4s;
+    transition: transform 0.08s linear 0.4s;
+    transition: transform 0.08s linear 0.4s, -webkit-transform 0.08s linear 0.4s;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right; }
+  .willow__desc a:hover .line.-left,
+  .willow__desc a:active .line.-left,
+  .marvel__desc a:hover .line.-left,
+  .marvel_desc a:active .line.-left,
+  .video__desc a:hover .line.-left,
+  .video__desc a:active .line.-left,
+  .horror__desc a:hover .line.-left,
+  .horror__desc a:active .line.-left {
+    -webkit-transition: -webkit-transform 0.08s linear 0.48s;
+    transition: -webkit-transform 0.08s linear 0.48s;
+    -o-transition: transform 0.08s linear 0.48s;
+    transition: transform 0.08s linear 0.48s;
+    transition: transform 0.08s linear 0.48s, -webkit-transform 0.08s linear 0.48s;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top; }
+  .willow__desc a:hover .line.-bottom,
+  .willow__desc a:active .line.-bottom,
+  .marvel__desc a:hover .line.-bottom,
+  .marvel_desc a:active .line.-bottom,
+  .video__desc a:hover .line.-bottom,
+  .video__desc a:active .line.-bottom,
+  .horror__desc a:hover .line.-bottom,
+  .horror__desc a:active .line.-bottom {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transition: -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    -o-transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s, -webkit-transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+    -webkit-transform-origin: left;
+    -ms-transform-origin: left;
+    transform-origin: left; }
+
+.willow__pic img,
+.video__pic img {
   max-width: 100%;
+  margin-top: 20px;
   margin-left: 10px; }
+
+.marvel__pic img,
+.horror__pic img {
+  max-width: 100%;
+  margin-top: 20px;
+  margin-right: 10px; }
+
+.contact {
+  background: black;
+  text-align: center; }
