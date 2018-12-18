@@ -4,13 +4,15 @@ const portfolio = {};
 
 $(function () {
     portfolio.init();
-    portfolio.backToTop();
-    portfolio.reveal();
 })
 
 portfolio.init = function(){
-    portfolio.textShadow()
+    portfolio.textShadow();
+    portfolio.backToTop();
+    portfolio.reveal();
 }
+
+// AOS.init();
 
 portfolio.textShadow = function(){
 
