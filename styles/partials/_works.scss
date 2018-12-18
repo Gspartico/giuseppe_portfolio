@@ -2,6 +2,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &__why{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img{
+            width: 10%;
+        }
+
+        & p{
+            margin: 0 15px;
+            
+            font-size: 2rem;
+
+        }
+
+        & span{
+            color: #fa3297;
+        }
+
+    }
+}
+
+img.works__why--zoid{
+          width: 11%;
 }
 
 #work{

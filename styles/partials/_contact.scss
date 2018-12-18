@@ -2,27 +2,6 @@
     background: black;
     text-align: center;
 
-    &__why{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        & img{
-            width: 10%;
-        }
-
-        & p{
-            margin: 0 15px;
-            
-            font-size: 2rem;
-
-        }
-
-        & span{
-            color: #fa3297;
-        }
-    }
-
     &__form{
         width: 100%;
         border: none;

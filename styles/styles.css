@@ -373,6 +373,26 @@ i {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .works__why {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .works__why img {
+      width: 10%; }
+    .works__why p {
+      margin: 0 15px;
+      font-size: 2rem; }
+    .works__why span {
+      color: #fa3297; }
+
+img.works__why--zoid {
+  width: 11%; }
 
 #work {
   width: 40%;
@@ -665,23 +685,6 @@ i {
 .contact {
   background: black;
   text-align: center; }
-  .contact__why {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .contact__why img {
-      width: 10%; }
-    .contact__why p {
-      margin: 0 15px;
-      font-size: 2rem; }
-    .contact__why span {
-      color: #fa3297; }
   .contact__form {
     width: 100%;
     border: none;
