@@ -10,6 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-bottom: 40px;
 }
 
 .skills li{
@@ -34,6 +35,10 @@
 .skills span{
     margin-top: 13px;
 }
+
+// .skills svg{
+//     margin-top: 40px;
+// }
 // .skills__svg{
 //     path{
 //         stroke: #fa3297;

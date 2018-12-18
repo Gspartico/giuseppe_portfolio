@@ -10,9 +10,8 @@ portfolio.init = function(){
     portfolio.textShadow();
     portfolio.backToTop();
     portfolio.reveal();
+    portfolio.burger();
 }
-
-// AOS.init();
 
 portfolio.textShadow = function(){
 
@@ -69,5 +68,19 @@ portfolio.reveal = function () {
                 $('#revealAbout').addClass("revealOnScroll");
             }
         });
+    });
+}
+
+portfolio.burger = function () {
+    $(document).delegate('.open', 'click', function (event) {
+        $(this).addClass('oppenned');
+        event.stopPropagation();
+    })
+    $(document).delegate('body', 'click', function (event) {
+        $('.open').removeClass('oppenned');
+    })
+    $(document).delegate('.close', 'click', function (event) {
+        $('.open').removeClass('oppenned');
+        event.stopPropagation();
     });
 }
