@@ -15,8 +15,8 @@ portfolio.init = function(){
 
 portfolio.textShadow = function(){
 
-let firstShadow = getShadow('#fa3297', 510, 'bottomLeft');
-let secondShadow = getShadow('#FF1E50', 400, 'bottomRight');
+let firstShadow = getShadow('#fa3297', 1000, 'bottomLeft');
+let secondShadow = getShadow('#FF1E50', 1000, 'bottomRight');
 
  $('h1').attr('style', firstShadow);
 $('h2').attr('style', secondShadow);
@@ -46,14 +46,15 @@ function getShadow(color, pxlength, direction) {
     }
     return `text-shadow: ${textShadow.join()};`
 }
-// Credit for text-shadow function to Tiff Noguira and Kristen Spencer from the codepens -
+// Credit for text-shadow function to Tiff Noguira and Kristen Spencer from the codepens at https://codepen.io/tiffanydanielle/pen/JOQWdy and https://codepen.io/kristencodes/pen/KyjmNX?editors=1100
+
 }
 
 portfolio.backToTop = function () {
     $(".toTop").on('click', function () {
         $('html, body').animate({
-            scrollTop: $('body').offset().top
-        }, 1000);
+            scrollTop: $('#top').offset().top
+        }, 1200);
     })
 }
 
