@@ -192,6 +192,9 @@ h4 {
       color: #fa3297;
       font-size: 2.3rem; }
 
+.hide {
+  visibility: hidden; }
+
 header {
   background: #1d1c1c;
   height: 100vh;

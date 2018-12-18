@@ -11,6 +11,7 @@ portfolio.init = function(){
     portfolio.backToTop();
     portfolio.reveal();
     portfolio.burger();
+    portfolio.sideNav();
 }
 
 portfolio.textShadow = function(){
@@ -18,7 +19,7 @@ portfolio.textShadow = function(){
 let firstShadow = getShadow('#fa3297', 1000, 'bottomLeft');
 let secondShadow = getShadow('#FF1E50', 1000, 'bottomRight');
 
- $('h1').attr('style', firstShadow);
+$('h1').attr('style', firstShadow);
 $('h2').attr('style', secondShadow);
 
 function getShadow(color, pxlength, direction) {
@@ -85,3 +86,17 @@ portfolio.burger = function () {
         event.stopPropagation();
     });
 }
+
+portfolio.sideNav = function (){
+        //caches a jQuery object containing the header element
+        const nav = $(".nav__sidebar");
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 120) {
+                nav.removeClass('hide');
+            } else {
+                nav.addClass('hide');
+            }
+        });
+    };
