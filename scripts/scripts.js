@@ -54,17 +54,17 @@ function getShadow(color, pxlength, direction) {
 portfolio.backToTop = function () {
     $(".toTop").on('click', function () {
         $('html, body').animate({
-            scrollTop: $('#top').offset().top
-        }, 1200);
+            scrollTop: $('body').offset().top
+        }, 1300);
     })
 }
 
 portfolio.reveal = function () {
     $(window).scroll(function () {
         $('#about__svg').each(function () {
-            var imagePos = $(this).offset().top;
-            var imageHeight = $(this).height();
-            var topOfWindow = $(window).scrollTop();
+            let imagePos = $(this).offset().top;
+            let imageHeight = $(this).height();
+            let topOfWindow = $(window).scrollTop();
 
             if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
                 $('#revealAbout').addClass("revealOnScroll");
@@ -88,14 +88,14 @@ portfolio.burger = function () {
 }
 
 portfolio.sideNav = function (){
-        //caches a jQuery object containing the header element
         const nav = $(".nav__sidebar");
         $(window).scroll(function () {
-            var scroll = $(window).scrollTop();
+            let scroll = $(window).scrollTop();
 
-            if (scroll >= 120) {
-                nav.removeClass('hide');
-            } else {
+            if (scroll >= 170) {
+                nav.addClass('showicons').removeClass('hide');
+            } 
+            else{
                 nav.addClass('hide');
             }
         });
