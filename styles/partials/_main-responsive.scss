@@ -19,13 +19,44 @@
 }
 
 @media (max-width: 1250px){
-    .willow,
-    .marvel,
-    .video,
-    .horror{
-        &__divide{
-            left: 35%;
-            width: 300px;
-        }
+    .oppenned .sub-menu {
+    height: 370px;
+    width: 340px;
+    }
+
+    .oppenned span:nth-child(2) {
+    height: 370px;
+    width: 340px;
+    }
+
+    // .willow,
+    // .marvel,
+    // .video,
+    // .horror{
+    //     &__divide{
+    //         top: 51%;
+    //         left: 36%;
+    //         // width: 285px;
+    //     }
+    // }
+
+    .marvel__divide{
+        width: 305px;
+        left: 35%;
+    }
+
+    .video__divide{
+        width: 271px;
+        left: 36.8%;
+    }
+
+    .horror__divide{
+        width: 240px;
+        left: 38.4%;
+        top: 53%;
+    }
+
+    .willow__divide{
+        left: 36%;
     }
 }

@@ -589,7 +589,7 @@ img.works__why--zoid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   position: relative; }
   .willow__desc,
   .marvel__desc,
@@ -634,7 +634,7 @@ img.works__why--zoid {
     width: 285px;
     position: absolute;
     left: 37%;
-    top: 50%; }
+    top: 52%; }
   .willow__pic,
   .marvel__pic,
   .video__pic,
@@ -867,14 +867,12 @@ img.works__why--zoid {
 .video__pic img {
   max-width: 100%;
   margin-top: 10px;
-  margin-right: 30px;
   height: 100%; }
 
 .marvel__pic img,
 .horror__pic img {
   max-width: 100%;
   margin-top: 10px;
-  margin-right: 30px;
   height: 100%; }
 
 .contact {
@@ -1019,9 +1017,21 @@ footer {
     bottom: 130px; } }
 
 @media (max-width: 1250px) {
-  .willow__divide,
-  .marvel__divide,
-  .video__divide,
+  .oppenned .sub-menu {
+    height: 370px;
+    width: 340px; }
+  .oppenned span:nth-child(2) {
+    height: 370px;
+    width: 340px; }
+  .marvel__divide {
+    width: 305px;
+    left: 35%; }
+  .video__divide {
+    width: 271px;
+    left: 36.8%; }
   .horror__divide {
-    left: 35%;
-    width: 300px; } }
+    width: 240px;
+    left: 38.4%;
+    top: 53%; }
+  .willow__divide {
+    left: 36%; } }
