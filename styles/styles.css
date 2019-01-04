@@ -353,7 +353,7 @@ header {
   display: flex;
   position: absolute;
   bottom: 230px;
-  right: 87px;
+  right: 80px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
@@ -589,16 +589,17 @@ img.works__why--zoid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   position: relative; }
   .willow__desc,
   .marvel__desc,
   .video__desc,
   .horror__desc {
-    padding: 0 30px;
+    padding-top: 10px;
     font-size: 1.7rem;
     letter-spacing: 0.5px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    width: 50%; }
     .willow__desc h3,
     .marvel__desc h3,
     .video__desc h3,
@@ -630,18 +631,23 @@ img.works__why--zoid {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    width: 280px;
+    width: 285px;
     position: absolute;
     left: 37%;
     top: 50%; }
+  .willow__pic,
+  .marvel__pic,
+  .video__pic,
+  .horror__pic {
+    width: 50%; }
 
 .willow__desc,
 .video__desc {
-  margin-left: 30px; }
+  margin-left: 60px; }
 
 .marvel__desc,
 .horror__desc {
-  margin-right: 30px;
+  margin-right: 60px;
   text-align: right; }
 
 .willow__desc a,
@@ -860,14 +866,16 @@ img.works__why--zoid {
 .willow__pic img,
 .video__pic img {
   max-width: 100%;
-  margin-top: 20px;
-  margin-left: 10px; }
+  margin-top: 10px;
+  margin-right: 30px;
+  height: 100%; }
 
 .marvel__pic img,
 .horror__pic img {
   max-width: 100%;
-  margin-top: 20px;
-  margin-right: 10px; }
+  margin-top: 10px;
+  margin-right: 30px;
+  height: 100%; }
 
 .contact {
   background: black;
@@ -991,3 +999,29 @@ footer {
   font-size: 1.7rem;
   color: #fa3297;
   padding-bottom: 15px; }
+
+@media (max-width: 1380px) {
+  .socials {
+    right: 45px; } }
+
+@media (max-width: 1330px) {
+  .title {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    left: 155px;
+    bottom: 30px; }
+  .socials {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    right: 305px;
+    bottom: 130px; } }
+
+@media (max-width: 1250px) {
+  .willow__divide,
+  .marvel__divide,
+  .video__divide,
+  .horror__divide {
+    left: 35%;
+    width: 300px; } }

@@ -1,0 +1,31 @@
+@media (max-width: 1380px){
+    .socials{
+        right: 45px;
+    }
+}
+
+@media (max-width: 1330px){
+    .title{
+        transform: none;
+        left: 155px;
+        bottom: 30px;
+    }
+
+    .socials{
+        transform: none;
+        right: 305px;
+        bottom: 130px;
+    }
+}
+
+@media (max-width: 1250px){
+    .willow,
+    .marvel,
+    .video,
+    .horror{
+        &__divide{
+            left: 35%;
+            width: 300px;
+        }
+    }
+}
