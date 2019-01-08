@@ -29,6 +29,10 @@
     width: 340px;
     }
 
+    .firebase{
+        margin-left: 40px;
+    }
+
     .marvel__divide{
         width: 305px;
         left: 35%;
@@ -47,6 +51,18 @@
 
     .willow__divide{
         left: 36%;
+    }
+
+    .marvel__pic img,
+    .horror__pic img{
+        height: 90%;
+        margin-top: 25px;
+    }
+
+    .willow__pic img,
+    .video__pic img{
+        height: 91%;
+        margin-top: 25px;
     }
 }
 
@@ -77,15 +93,113 @@
         right: 195px;
     }
 
+    .about__content p{
+        font-size: 1.7rem;
+    }
+
+    .about__content img{
+        width: 35%;
+    }
+    // .marvel__pic img,
+    // .horror__pic img{
+    //     height: 90%;
+    //     margin-top: 25px;
+    // }
+
+    // .willow__pic img,
+    // .video__pic img{
+    //     height: 91%;
+    //     margin-top: 25px;
+    // }
+}
+
+@media (max-width: 1000px){
+    .marvel__divide{
+        width: 320px;
+        left: 30.4%;
+    }
+
+    .video__divide{
+        width: 263px;
+        left: 34%;
+    }
+
+    .horror__divide{
+        width: 258px;
+        left: 34.4%;
+    }
+
+    .willow__divide{
+        left: 32.7%;
+    }
+
+    .willow__desc h3, 
+    .marvel__desc h3, 
+    .video__desc h3, 
+    .horror__desc h3{
+        font-size: 2.4rem;
+    }
+
+    .willow__desc h4, 
+    .marvel__desc h4, 
+    .video__desc h4, 
+    .horror__desc h4 {
+        font-size: 1.5rem;
+    }
+
     .marvel__pic img,
     .horror__pic img{
-        height: 90%;
+        height: 85%;
         margin-top: 25px;
     }
 
     .willow__pic img,
     .video__pic img{
-        height: 91%;
-        margin-top: 25px;
+        height: 85%;
+        margin-top: 33px;
+    }
+}
+
+@media (max-width: 900px){
+    .firebase{
+        margin-left: 12px;
+    }
+
+    #work{
+        margin: 0;
+    }
+
+    .willow, .marvel, .video, .horror {
+        flex-direction: column;
+    }
+
+    .willow__desc, 
+    .marvel__desc, 
+    .video__desc, 
+    .horror__desc{
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .marvel__desc,
+    .horror__desc{
+        margin-right: 0;
+    }
+
+    .willow__desc, 
+    .video__desc {
+        margin-left: 0;
+    }
+
+    .marvel__pic, 
+    .horror__pic,
+    .video__pic, 
+    .willow__pic{
+        width: 100%;
+
+        & img{
+            height: 92%;
+        }
     }
 }
