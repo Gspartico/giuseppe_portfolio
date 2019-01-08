@@ -100,17 +100,6 @@
     .about__content img{
         width: 35%;
     }
-    // .marvel__pic img,
-    // .horror__pic img{
-    //     height: 90%;
-    //     margin-top: 25px;
-    // }
-
-    // .willow__pic img,
-    // .video__pic img{
-    //     height: 91%;
-    //     margin-top: 25px;
-    // }
 }
 
 @media (max-width: 1000px){
@@ -161,6 +150,14 @@
 }
 
 @media (max-width: 900px){
+    .about__content p{
+        font-size: 1.6rem;
+    }
+
+    .about__content img{
+        width: 40%;
+    }
+
     .firebase{
         margin-left: 12px;
     }
@@ -179,7 +176,6 @@
     .horror__desc{
         text-align: center;
         width: 100%;
-        margin-right: 0;
     }
 
     .marvel__desc,
@@ -192,14 +188,48 @@
         margin-left: 0;
     }
 
+    .willow__desc h3, 
+    .marvel__desc h3, 
+    .video__desc h3, 
+    .horror__desc h3 {
+        border-bottom: 2px solid #fa3297;
+        margin-bottom: 40px;
+        font-size: 2.8rem;
+    }
+
+    // .willow__desc p, 
+    .marvel__desc p, 
+    // .video__desc p, 
+    .horror__desc p {
+        margin-bottom: 15px;
+    }
+
     .marvel__pic, 
     .horror__pic,
     .video__pic, 
     .willow__pic{
-        width: 100%;
+        display: none;
+        // width: 100%;
 
-        & img{
-            height: 92%;
+        // & img{
+        //     height: 90%;
+        // }
+
+        &--mobile{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 35px;
+
+            & img{
+                height: 90%;
+            }
         }
     }
-}
+
+    .marvel__divide,
+    .video__divide,
+    .horror__divide,
+    .willow__divide{
+        display: none;
+    }
+}    

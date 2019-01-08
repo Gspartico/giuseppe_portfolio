@@ -81,6 +81,10 @@ img.works__why--zoid{
 
         &__pic{
             width: 50%;
+
+            &--mobile{
+                display: none;
+            }
         }
     }
 

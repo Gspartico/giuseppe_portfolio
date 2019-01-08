@@ -640,6 +640,11 @@ img.works__why--zoid {
   .video__pic,
   .horror__pic {
     width: 50%; }
+    .willow__pic--mobile,
+    .marvel__pic--mobile,
+    .video__pic--mobile,
+    .horror__pic--mobile {
+      display: none; }
 
 .willow__desc,
 .video__desc {
@@ -1099,6 +1104,10 @@ footer {
     margin-top: 33px; } }
 
 @media (max-width: 900px) {
+  .about__content p {
+    font-size: 1.6rem; }
+  .about__content img {
+    width: 40%; }
   .firebase {
     margin-left: 12px; }
   #work {
@@ -1113,21 +1122,42 @@ footer {
   .video__desc,
   .horror__desc {
     text-align: center;
-    width: 100%;
-    margin-right: 0; }
+    width: 100%; }
   .marvel__desc,
   .horror__desc {
     margin-right: 0; }
   .willow__desc,
   .video__desc {
     margin-left: 0; }
+  .willow__desc h3,
+  .marvel__desc h3,
+  .video__desc h3,
+  .horror__desc h3 {
+    border-bottom: 2px solid #fa3297;
+    margin-bottom: 40px;
+    font-size: 2.8rem; }
+  .marvel__desc p,
+  .horror__desc p {
+    margin-bottom: 15px; }
   .marvel__pic,
   .horror__pic,
   .video__pic,
   .willow__pic {
-    width: 100%; }
-    .marvel__pic img,
-    .horror__pic img,
-    .video__pic img,
-    .willow__pic img {
-      height: 92%; } }
+    display: none; }
+    .marvel__pic--mobile,
+    .horror__pic--mobile,
+    .video__pic--mobile,
+    .willow__pic--mobile {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 35px; }
+      .marvel__pic--mobile img,
+      .horror__pic--mobile img,
+      .video__pic--mobile img,
+      .willow__pic--mobile img {
+        height: 90%; }
+  .marvel__divide,
+  .video__divide,
+  .horror__divide,
+  .willow__divide {
+    display: none; } }
