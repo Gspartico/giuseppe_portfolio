@@ -176,6 +176,10 @@
     .horror__desc{
         text-align: center;
         width: 100%;
+
+        & p{
+            margin-bottom: 25px;
+        }
     }
 
     .marvel__desc,
@@ -197,28 +201,16 @@
         font-size: 2.8rem;
     }
 
-    // .willow__desc p, 
-    .marvel__desc p, 
-    // .video__desc p, 
-    .horror__desc p {
-        margin-bottom: 15px;
-    }
-
     .marvel__pic, 
     .horror__pic,
     .video__pic, 
     .willow__pic{
         display: none;
-        // width: 100%;
-
-        // & img{
-        //     height: 90%;
-        // }
 
         &--mobile{
             display: inline-block;
             width: 100%;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
 
             & img{
                 height: 90%;
@@ -232,4 +224,39 @@
     .willow__divide{
         display: none;
     }
+
+    .form__emailName{
+        flex-direction: column;
+    }
+
+    .name,
+    .email{
+        width: 100%;
+        text-align: center;
+    }
+
+    .email{
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    ::placeholder{
+        text-align: center;
+    }
 }    
+
+@media (max-width: 800px){
+    .open,
+    .socials,
+    .nav__sidebar{
+        visibility: hidden;
+    }
+
+    // .mobileNav{
+    //     display: block;
+    // }
+
+    .works__why p{
+        font-size: 1.7rem;
+    }
+}
