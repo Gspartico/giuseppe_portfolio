@@ -1208,6 +1208,8 @@ footer {
     text-align: center; } }
 
 @media (max-width: 800px) {
+  .wrapper {
+    width: 73%; }
   .open,
   .socials,
   .nav__sidebar {
@@ -1222,9 +1224,98 @@ footer {
   .title {
     bottom: 10%;
     left: 10%; }
+  .about__svg {
+    height: 130px;
+    width: 275px; }
+  .about__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 55px; }
   .about__content p {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    width: 100%; }
+  .about__content img {
+    margin-right: 0;
+    width: 43%; }
+  .firebase {
+    margin-left: 3px; }
   .works__why p {
-    font-size: 1.7rem; }
+    font-size: 1.5rem; }
   .form a {
     font-size: 2.5rem; } }
+
+@media (max-width: 650px) {
+  .giuseppe,
+  .spartico {
+    font-size: 12rem; }
+  .giuseppe {
+    padding-top: 40px; }
+  .title {
+    font-size: 5rem; }
+  .mobileNav__links a {
+    font-size: 2.3rem;
+    padding: 20px; }
+  .skills li {
+    width: 20%; }
+  #work {
+    width: 50%; }
+  .works__why {
+    display: none; }
+  .form a {
+    font-size: 2.2rem;
+    margin-bottom: 0; }
+  .form__send input {
+    width: 35%; } }
+
+@media (max-width: 550px) {
+  .giuseppe,
+  .spartico {
+    font-size: 10rem; }
+  .giuseppe {
+    padding-top: 55px; }
+  .spartico {
+    bottom: 4%; }
+  .title {
+    bottom: 6%; } }
+
+@media (max-width: 480px) {
+  .mobileNav__links a {
+    padding: 20px 10px;
+    font-size: 2rem; }
+  .form a {
+    font-size: 2rem; } }
+
+@media (max-width: 425px) {
+  header {
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: 75vh; }
+  .mobileNav__links a {
+    padding: 20px 5px;
+    font-size: 1.8rem; }
+  .giuseppe,
+  .spartico {
+    font-size: 8rem; }
+  .title {
+    font-size: 3.5rem; }
+  .about__svg {
+    width: 240px; }
+  .about__content img {
+    width: 60%; }
+  .socialNav i {
+    font-size: 2rem; }
+  .socialNav ul {
+    right: 3%; }
+  #work {
+    width: 90%; }
+  .form__send input {
+    font-size: 1.8rem; } }
+
+@media (max-width: 350px) {
+  .giuseppe,
+  .spartico {
+    font-size: 7rem; }
+  .title {
+    font-size: 3rem; } }
