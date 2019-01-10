@@ -88,7 +88,7 @@ portfolio.burger = function () {
 }
 
 portfolio.sideNav = function (){
-        const nav = $(".nav__sidebar");
+        const nav = $(".socialNav__sidebar");
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
 

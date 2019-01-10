@@ -14,7 +14,7 @@
     .socials{
         transform: none;
         right: 305px;
-        bottom: 120px;
+        bottom: 130px;
     }
 }
 
@@ -249,14 +249,36 @@
     .open,
     .socials,
     .nav__sidebar{
-        visibility: hidden;
+        display: none;
     }
 
-    // .mobileNav{
-    //     display: block;
-    // }
+    .mobileNav{
+        display: block;
+    }
+
+    .giuseppe{
+        padding-top: 0;
+    }
+
+    .spartico{
+        padding-left: 0;
+        bottom: 7%;
+    }
+
+    .title{
+        bottom: 10%;
+        left: 10%;
+    }
+
+    .about__content p{
+        font-size: 1.5rem;
+    }
 
     .works__why p{
         font-size: 1.7rem;
+    }
+
+    .form a{
+        font-size: 2.5rem;
     }
 }

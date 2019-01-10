@@ -128,232 +128,30 @@ header{
 		}
 	}
 
-.mobileNav--Toggle
-{
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+.mobileNav{
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 1.3px;
+	display: none;
 }
+	
+.mobileNav__links{
+	display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto;
+	padding: 20px 10px;
+	
+	& a{
+		text-decoration: none;
+		font-size: 2.5rem;
+		color: white;
+		padding: 25px;
+	}
 
-.mobileNav--Toggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-.mobileNav--Toggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-.mobileNav--Toggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-.mobileNav--Toggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-.mobileNav--Toggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: white;
-}
-
-/*
- * But let's hide the middle one.
- */
-.mobileNav--Toggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-.mobileNav--Toggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-/*
- * And let's slide it in from the left
- */
-.mobileNav--Toggle input:checked ~ ul
-{
-  transform: none;
+	& a:hover{
+		color: #fa3297;
+	}
 }	
-
-// 	.mobileNav__button{
-// 	margin: 0;
-// 	padding: 0;
-// 	opacity: 0.6;
-//     background-color: transparent;
-//     position: fixed;
-//     z-index: 2;
-//     top: 24px;
-//     right: 24px;
-//     border: none;
-//     width: 36px;
-//     height: 30px;
-//     outline: none;
-//     -webkit-transition: opacity 0.2s ease-out;
-//     -o-transition: opacity 0.2s ease-out;
-//     transition: opacity 0.2s ease-out;
-// }
-
-// .mobileNav__button::before{
-// 	content: "";
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     margin: auto;
-//     right: auto;
-//     width: 100%;
-//     background: -webkit-gradient(linear, left top, left bottom, from(#fcce61), color-stop(20%, #fcce61), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #fcce61), color-stop(60%, #fcce61), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #fcce61), to(#fcce61));
-//     background: -webkit-linear-gradient(top, #fcce61, #fcce61 20%, transparent 20%, transparent 40%, #fcce61 40%, #fcce61 60%, transparent 60%, transparent 80%, #fcce61 80%, #fcce61 100%);
-//     background: -o-linear-gradient(top, #fcce61, #fcce61 20%, transparent 20%, transparent 40%, #fcce61 40%, #fcce61 60%, transparent 60%, transparent 80%, #fcce61 80%, #fcce61 100%);
-//     background: linear-gradient(to bottom, #fcce61, #fcce61 20%, transparent 20%, transparent 40%, #fcce61 40%, #fcce61 60%, transparent 60%, transparent 80%, #fcce61 80%, #fcce61 100%);
-//     -webkit-transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
-//     -o-transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
-//     transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
-// }
-
-// .mobileNav__button::after{
-// 	opacity: 0;
-//     content: "×";
-//     color: #383838;
-//     position: absolute;
-//     top: 16px;
-//     left: -4px;
-//     font-family: Arial, sans-serif;
-//     font-size: 76px;
-//     line-height: 0;
-//     -webkit-transition: opacity 0.4s ease-out;
-//     -o-transition: opacity 0.4s ease-out;
-//     transition: opacity 0.4s ease-out;
-// }
-
-
-// .mobileNav {
-// 	display: none;
-//     position: fixed;
-//     right: 3%;
-//     width: 1%;
-//     z-index: 20;
-//     top: 50%;
-//     -webkit-transform: translate(-50%, -50%);
-//     -ms-transform: translate(-50%, -50%);
-//     transform: translate(-50%, -50%);
-//     word-break: break-all;
-//     text-align: center;
-//     opacity: 0.8;	
-// }
-
-// .mobileNav ul {
-
-//     list-style-type: none;
-//     display: flex;
-//     -webkit-box-orient: vertical;
-//     -webkit-box-direction: normal;
-//     -ms-flex-direction: column;
-//     flex-direction: column;
-//     -webkit-box-align: center;
-//     -ms-flex-align: center;
-//     align-items: center;
-//     -webkit-box-pack: center;
-//     -ms-flex-pack: center;
-//     justify-content: center;
-//     margin: 0;
-// 	padding: 0;
-// }
-
-// .mobileNav ul li {
-
-//     font-size: 1rem;
-//     font-family: "Merriweather", sans-serif;
-//     color: #fa3297;
-//     letter-spacing: 1px;
-//     margin: 10px 5px 10px 0;
-//     line-height: 12px;
-//     -webkit-transition: 0.4s;
-//     -o-transition: 0.4s;
-// 	transition: 0.4s;
-// }	
 
 .giuseppe{
     font-family: 'Oswald', sans-serif;

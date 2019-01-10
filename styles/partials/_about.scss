@@ -68,7 +68,7 @@
     }
 }
 
-nav ul{
+.socialNav ul{
     color: black;
     display: flex;
     flex-direction: column;
@@ -81,17 +81,17 @@ nav ul{
 
 }
 
-nav ul.showicons{
+.socialNav ul.showicons{
     opacity: 1;
 }
 
-nav li{
+.socialNav li{
     list-style-type: none;
     text-decoration: none;
     margin-bottom: 20px;
 }
         
-nav i{
+.socialNav i{
     color: #fa3297;
     font-size: 2.3rem;
 }

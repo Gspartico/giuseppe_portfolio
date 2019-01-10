@@ -314,127 +314,28 @@ header {
 .oppenned li {
   margin-right: 168px; }
 
-.mobileNav--Toggle {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
-  z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+.mobileNav {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1.3px;
+  display: none; }
 
-.mobileNav--Toggle input {
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0;
-  /* hide this */
-  z-index: 2;
-  /* and place it over the hamburger */
-  -webkit-touch-callout: none; }
-
-/*
- * Just a quick hamburger
- */
-.mobileNav--Toggle span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #cdcdcd;
-  border-radius: 3px;
-  z-index: 1;
-  -webkit-transform-origin: 4px 0px;
-  -ms-transform-origin: 4px 0px;
-  transform-origin: 4px 0px;
-  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
-
-.mobileNav--Toggle span:first-child {
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  transform-origin: 0% 0%; }
-
-.mobileNav--Toggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-  -ms-transform-origin: 0% 100%;
-  transform-origin: 0% 100%; }
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-.mobileNav--Toggle input:checked ~ span {
-  opacity: 1;
-  -webkit-transform: rotate(45deg) translate(-2px, -1px);
-  -ms-transform: rotate(45deg) translate(-2px, -1px);
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: white; }
-
-/*
- * But let's hide the middle one.
- */
-.mobileNav--Toggle input:checked ~ span:nth-last-child(3) {
-  opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-  -ms-transform: rotate(0deg) scale(0.2, 0.2);
-  transform: rotate(0deg) scale(0.2, 0.2); }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-.mobileNav--Toggle input:checked ~ span:nth-last-child(2) {
-  -webkit-transform: rotate(-45deg) translate(0, -1px);
-  -ms-transform: rotate(-45deg) translate(0, -1px);
-  transform: rotate(-45deg) translate(0, -1px); }
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  -webkit-transform-origin: 0% 0%;
-  -ms-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
-
-#menu li {
-  padding: 10px 0;
-  font-size: 22px; }
-
-/*
- * And let's slide it in from the left
- */
-.mobileNav--Toggle input:checked ~ ul {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none; }
+.mobileNav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 10px; }
+  .mobileNav__links a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: white;
+    padding: 25px; }
+  .mobileNav__links a:hover {
+    color: #fa3297; }
 
 .giuseppe {
   font-family: 'Oswald', sans-serif;
@@ -589,7 +490,7 @@ i {
   100% {
     fill: #fa3297; } }
 
-nav ul {
+.socialNav ul {
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -607,15 +508,15 @@ nav ul {
   -o-transition: opacity 0.7s ease;
   transition: opacity 0.7s ease; }
 
-nav ul.showicons {
+.socialNav ul.showicons {
   opacity: 1; }
 
-nav li {
+.socialNav li {
   list-style-type: none;
   text-decoration: none;
   margin-bottom: 20px; }
 
-nav i {
+.socialNav i {
   color: #fa3297;
   font-size: 2.3rem; }
 
@@ -1141,7 +1042,7 @@ footer {
     -ms-transform: none;
     transform: none;
     right: 305px;
-    bottom: 120px; } }
+    bottom: 130px; } }
 
 @media (max-width: 1250px) {
   .oppenned .sub-menu {
@@ -1310,6 +1211,20 @@ footer {
   .open,
   .socials,
   .nav__sidebar {
-    visibility: hidden; }
+    display: none; }
+  .mobileNav {
+    display: block; }
+  .giuseppe {
+    padding-top: 0; }
+  .spartico {
+    padding-left: 0;
+    bottom: 7%; }
+  .title {
+    bottom: 10%;
+    left: 10%; }
+  .about__content p {
+    font-size: 1.5rem; }
   .works__why p {
-    font-size: 1.7rem; } }
+    font-size: 1.7rem; }
+  .form a {
+    font-size: 2.5rem; } }
